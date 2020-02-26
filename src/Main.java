@@ -1,35 +1,23 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class Main {
 
-    public Main(){
-
-
-    }
-
-    public void paintComponent(Graphics g) {
-        Graphics2D g2 = (Graphics2D) g;
-
-    }
-
     public static void main(String[] args) {
-        //The JFrame class represents the window that holds the graphics
-        JFrame window = new JFrame("tristan did nothing and kyle and keren did it all! :D");
-        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        window.setBounds(0, 0, 800, 800 + 22); //(x, y, w, h) 22 due to title bar.
+        JFrame frame = new JFrame("Tic Tac Toe - Hopps");
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+        int width = 720;
+        int height = 719;
+        frame.setPreferredSize(new Dimension(width, height + 24));
 
-        Main panel = new Main(600, 800);
 
+        JPanel panel = new (width, height); //put whatever type of panel we want
         panel.setFocusable(true);
         panel.grabFocus();
 
-        window.add(panel);
-        window.setVisible(true);
-        window.setResizable(false);
+        frame.add(panel);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setResizable(false);
     }
-
-
 }
