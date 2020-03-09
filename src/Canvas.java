@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 
 public class Canvas extends JPanel{
 
@@ -9,6 +11,18 @@ public class Canvas extends JPanel{
         width = w;
         height = h;
         setSize(width, height);
+
+        addMouseMotionListener(new MouseMotionListener() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+
+            }
+        });
 
     }
 

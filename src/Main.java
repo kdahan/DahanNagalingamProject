@@ -11,7 +11,7 @@ public class Main {
         frame.setPreferredSize(new Dimension(width, height + 24));
 
 
-        JPanel panel = new (width, height); //put whatever type of panel we end up using
+        JPanel panel = new Canvas(width, height); //put whatever type of panel we end up using
         panel.setFocusable(true);
         panel.grabFocus();
 
